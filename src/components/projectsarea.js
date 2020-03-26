@@ -2,7 +2,7 @@ import React from 'react'
 
 import Section from './section'
 import Button from './button'
-import SectionHeader from './sectionheader'
+import SectionHeader from '../components/sectionheader'
 import Projects from './projects'
 
 import codeIcon from '../images/code.svg'

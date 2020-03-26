@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Section from '../components/section'
-import SectionHeader from './sectionheader'
+import SectionHeader from '../components/sectionheader'
 import InfoContainer from '../components/infocontainer'
 import Tag from '../components/tag'
 import Card from '../components/card'

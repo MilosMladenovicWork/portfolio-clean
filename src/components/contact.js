@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Section from './section'
-import SectionHeader from './sectionheader'
+import SectionHeader from '../components/sectionheader'
 import ContactForm from './contactform'
 
 function Contact(){
