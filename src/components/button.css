@@ -1,0 +1,15 @@
+.button{
+  display:flex;
+  width:fit-content;
+  align-items: center;
+  padding:10px;
+  text-decoration: none;
+  background-color:#3B8BEA;
+  color:white;
+  border-radius: 4px;
+  margin-bottom:20px;
+}
+
+.button img{
+  margin-right:10px;
+}
