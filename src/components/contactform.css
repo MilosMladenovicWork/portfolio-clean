@@ -1,0 +1,28 @@
+.contact-form{
+  padding:20px;
+  box-shadow:0 0 10px #F3F3F3;
+  width:50%;
+  margin:auto;
+  display:flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.contact-form input{
+  margin-bottom:20px;
+  border:none;
+  border-bottom:1px solid #4E4E4E; 
+}
+
+.contact-form input:focus{
+  outline:none;
+}
+
+.contact-form textarea{
+  margin-bottom:20px;
+  border:none;
+  border-bottom:1px solid #4E4E4E; 
+  min-height:200px;
+  resize:vertical;
+  outline:none;
+}

@@ -2,9 +2,9 @@ import React from 'react'
 
 import './button.css'
 
-function Button({to:href, text, icon}){
+function Button({to:href, text, icon, style}){
   return(
-    <a href={href} className='button'>
+    <a href={href} className='button' style={style}>
       <img src={icon} alt='button icon'/>
       {text}
     </a>

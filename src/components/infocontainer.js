@@ -1,12 +1,32 @@
 import React from 'react'
+import {animated, useSpring, config} from 'react-spring'
 
 import './infoContainer.css'
 
-function InfoContainer({children, small, style}){
+function InfoContainer({children, small, dark}){
+
+  const [transform, set, stop] = useSpring(() => ({transform:'scale(1)', config:config.gentle}))
+
+  function classAdd(){
+    let classes = 'info-container'
+    if(small){
+      classes += ' half'
+    }
+    if(dark){
+      classes += ' dark'
+    }
+    return classes
+  }
+
   return(
-    <div className={small ? `info-container half` : `info-container`} style={style}>
+    <animated.div 
+      className={classAdd()}
+      style={transform}
+      onPointerOver={() => set({transform:`scale(1.1)`})}
+      onPointerOut={() => set({transform:`scale(1)`})}
+    >
       {children}
-    </div>
+    </animated.div>
   )
 }
 

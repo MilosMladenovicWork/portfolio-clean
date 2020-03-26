@@ -4,8 +4,7 @@ function HomeIllustration(){
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="725.231"
-      height="740.601"
+      width="70vh"
       viewBox="0 0 725.231 740.601"
       style={{height:'100%'}}
     >
