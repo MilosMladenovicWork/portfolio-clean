@@ -1,5 +1,6 @@
 import React from 'react'
 import {animated, useSpring, config} from 'react-spring'
+import { navigate } from 'gatsby'
 
 import './project.css'
 
@@ -9,6 +10,10 @@ function Project({img, text, href, slug}){
 
   const [transform, set, stop] = useSpring(() => ({transform:'scale(1)', config:config.gentle}))
   const [opacity, setContainer, stopContainer] = useSpring(() => ({opacity:0}))
+
+  function visitPage(){
+    navigate(`/${slug}`)
+  }
 
   return(
     <animated.div 
@@ -42,7 +47,7 @@ function Project({img, text, href, slug}){
         <p>
           {text}
         </p>
-        <img src={eyeIcon} alt={`Click for more info on ${text}`}/>
+        <img src={eyeIcon} alt={`Click for more info on ${text}`} onClick={visitPage}/>
       </div>
     </animated.div>
   )

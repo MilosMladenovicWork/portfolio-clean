@@ -17,6 +17,7 @@ function AnimatedGroup({children, delay}){
 
   return(
     <animated.g 
+      onClick={() => set({opacity:0, transform:'scale(0.9)'})}
       className='animated-group' 
       style={opacity}
     >

@@ -33,7 +33,7 @@ nav ul li:not(:first-child)::before{
   content:'|';
 }
 
-nav .active-section{
+nav .active-section a{
   color:#3B8BEA;
   font-weight:700;
 }

@@ -45,6 +45,10 @@
   padding:15px;
 }
 
+.project .project-info img{
+  cursor:pointer;
+}
+
 .project .project-info p{
   margin:0;
 }

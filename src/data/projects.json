@@ -1,38 +1,74 @@
 [
   {
+    "name":"Portfolio 2020",
+    "img":"../images/portfolio2020.png",
+    "href":"https://portfolio2020portfolio.netlify.com/",
+    "slug":"portfolio-2020",
+    "technologies":[
+      "HTML5", "CSS3", "JavaScript", "React", "WebGL"
+    ]
+  },
+  {
+    "name":"Portfolio Crystal",
+    "img":"../images/portfoliocrystal.png",
+    "href":"https://portfoliocrystal.netlify.com/",
+    "slug":"portfolio-crystal",
+    "technologies":[
+      "HTML5", "CSS3", "JavaScript", "React", "WebGL", "Node.js", "Express"
+    ]
+  },
+  {
     "name":"Perun",
     "img":"../images/perun.png",
     "href":"https://perunperun.netlify.com/",
-    "slug":"perun"
+    "slug":"perun",
+    "technologies":[
+      "HTML5", "CSS3", "SCSS", "JavaScript"
+    ]
   },
   {
     "name":"MovieZone",
     "img":"../images/moviezone.png",
     "href":"https://moviezonemovie.netlify.com/",
-    "slug":"moviezone"
+    "slug":"moviezone",
+    "technologies":[
+      "HTML5", "CSS3", "JavaScript", "React", "Redux"
+    ]
   },
   {
     "name":"Real Estate",
     "img":"../images/realestate.png",
     "href":"https://realestatereal.netlify.com/",
-    "slug":"real-estate"
+    "slug":"real-estate",
+    "technologies":[
+      "HTML5", "CSS3", "SCSS", "JavaScript"
+    ]
   },
   {
     "name":"CosmoBakery",
     "img":"../images/cosmobakery.png",
     "href":"https://cosmobakery.netlify.com/",
-    "slug":"cosmobakery"
+    "slug":"cosmobakery",
+    "technologies":[
+      "HTML5", "CSS3", "JavaScript"
+    ]
   },
   {
     "name":"CozyHut",
     "img":"../images/cozyhut.png",
     "href":"https://cozy-hut.netlify.com/",
-    "slug":"cozyhut"
+    "slug":"cozyhut",
+    "technologies":[
+      "HTML5", "CSS3", "JavaScript", "React", "Gatsby.js"
+    ]
   },
   {
     "name":"MIMS Muscle",
     "img":"../images/mimsmuscle.png",
     "href":"https://mimsmuscle.netlify.com/",
-    "slug":"mims-muscle"
+    "slug":"mims-muscle",
+    "technologies":[
+      "HTML5", "CSS3", "SCSS", "JavaScript"
+    ]
   }
 ]

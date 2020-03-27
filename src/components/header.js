@@ -8,25 +8,25 @@ const Header = ({section}) => (
   <header>
     <nav>
       <ul>
-        <li>
-          <a href='#home' className={section === 0 && 'active-section'}>
-            Home
-          </a>
+        <li className={section === 0 && 'active-section'}>
+          <Link to='#home'>
+            Home       
+          </Link>
         </li>
-        <li>
-          <a href='#about' className={section === 1 && 'active-section'} >
+        <li className={section === 1 && 'active-section'} >
+          <Link to='#about'>
             About
-          </a>
+          </Link>
         </li>
-        <li>
-          <a href='#projects' className={section === 2 && 'active-section'}>
+        <li className={section === 2 && 'active-section'}>
+          <Link to='#projects'>
             Projects
-          </a>
+          </Link>
         </li>
-        <li>
-          <a href='#contact' className={section === 3 && 'active-section'}>
+        <li className={section === 3 && 'active-section'}>
+          <Link to='#contact'>
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
