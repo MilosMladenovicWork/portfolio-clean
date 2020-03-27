@@ -5,7 +5,35 @@
   margin-bottom:50px;
 }
 
-.project > img{
+.project .img-container{
+  position:relative;
+}
+
+.project .img-container a{
+  transform:translate(-50%, -50%);
+  position:absolute;
+  top:50%;
+  left:50%;
+  border:1px solid white;
+  padding:10px 20px;
+  border-radius: 4px;
+  margin:0;
+  opacity:0;
+  color:white;
+  text-decoration: none;
+}
+
+.project .img-container .dark-overlay{
+  background-color:rgba(0, 0, 0, 0.5);
+  width:100%;
+  height:calc(100% - 6px);
+  position:absolute;
+  top:0;
+  opacity:0;
+  border-radius: 10px 10px 0 0;
+}
+
+.project .img-container img{
   width:100%;
   border-radius:10px 10px 0 0;
 }

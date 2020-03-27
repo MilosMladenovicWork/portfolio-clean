@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Perun",
+    "img":"../images/perun.png",
+    "href":"https://perunperun.netlify.com/",
+    "slug":"perun"
+  },
+  {
+    "name":"MovieZone",
+    "img":"../images/moviezone.png",
+    "href":"https://moviezonemovie.netlify.com/",
+    "slug":"moviezone"
+  },
+  {
+    "name":"Real Estate",
+    "img":"../images/realestate.png",
+    "href":"https://realestatereal.netlify.com/",
+    "slug":"real-estate"
+  },
+  {
+    "name":"CosmoBakery",
+    "img":"../images/cosmobakery.png",
+    "href":"https://cosmobakery.netlify.com/",
+    "slug":"cosmobakery"
+  },
+  {
+    "name":"CozyHut",
+    "img":"../images/cozyhut.png",
+    "href":"https://cozy-hut.netlify.com/",
+    "slug":"cozyhut"
+  },
+  {
+    "name":"MIMS Muscle",
+    "img":"../images/mimsmuscle.png",
+    "href":"https://mimsmuscle.netlify.com/",
+    "slug":"mims-muscle"
+  }
+]

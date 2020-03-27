@@ -19,8 +19,6 @@ function AnimatedGroup({children, delay}){
     <animated.g 
       className='animated-group' 
       style={opacity}
-      onPointerOver={() => set({transform:'scale(1.01)'})}
-      onPointerOut={() => set({transform:'scale(1)'})}
     >
       {children}
     </animated.g>
