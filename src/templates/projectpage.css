@@ -33,11 +33,12 @@
   cursor:pointer;
 }
 
-@media (max-width:576px){
+@media (max-width:1200px){
   .project-image{
     margin-bottom:10vh;
   }
   .back-arrow{
     top:10vh;
+    right:5vw;
   }
 }

@@ -53,8 +53,14 @@
   margin:0;
 }
 
-@media (max-width:576px){
+@media (max-width:1200px){
   .project{
     width:100%;
+  }
+}
+
+@media (min-width:576px){
+  .project{
+    width:45%;
   }
 }

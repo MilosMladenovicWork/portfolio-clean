@@ -3,7 +3,7 @@
   height:100%;
 }
 
-@media (max-width:576px){
+@media (max-width:1200px){
   .home-illustration{
     width:100%;
     height:auto;

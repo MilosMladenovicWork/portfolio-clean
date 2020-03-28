@@ -7,7 +7,7 @@
   align-self: center;
 }
 
-@media (max-width:576px){
+@media (max-width:1200px){
   .home-container{
     height:auto;
     flex-direction: column;
