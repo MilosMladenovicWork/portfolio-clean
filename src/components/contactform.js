@@ -8,6 +8,7 @@ import './contactform.css'
 import sendIcon from '../images/send.svg'
 import notDone from '../images/notdone.svg'
 import done from '../images/done.svg'
+import loading from '../images/loading.svg'
 
 function ContactForm(){
 
@@ -17,6 +18,7 @@ function ContactForm(){
   const [formValid, setFormValid] = useState()
   const [formMessage, setFormMessage] = useState()
   const [formStatus, setFormStatus] = useState('')
+  const [resetAnim, setResetAnim] = useState()
 
 
   const scale = useSpring({transform: focused ? 'scale(1.1)' : 'scale(1)'})
@@ -27,6 +29,16 @@ function ContactForm(){
     friction:4,
     mass:1,
   }}))
+  const rotate = useSpring(
+  {from:{transform:'rotate(0deg)'} ,
+  to:{transform:'rotate(360deg)'},
+  onRest:() => {
+    setResetAnim(true)
+  },
+  onStart:() => {
+    setResetAnim(false)
+  },
+  reset:resetAnim})
 
   function changeHandler(e){
     let name = e.target.name
@@ -218,9 +230,9 @@ function ContactForm(){
           onChange={(e) => changeHandler(e)}
         ></textarea>
         <div style={{display:'flex',alignItems:'center'}}>
-          {formStatus === 'success' && <img className='status-icon' src={done} alt='Form status valid'/>}
-          {formStatus === 'loading' && <img className='status-icon' src={sendIcon} alt='Form status valid'/>}
-          {formStatus === 'error' && <img className='status-icon' src={notDone} alt='Form status not valid'/>}
+          {formStatus === 'success' && <img className='status-icon' src={done} alt='Form status success'/>}
+          {formStatus === 'loading' && <animated.img style={rotate}  className='status-icon' src={loading} alt='Form status loading'/>}
+          {formStatus === 'error' && <img className='status-icon' src={notDone} alt='Form status error'/>}
           <Button text='Send' icon={sendIcon} onClick={checkValidationForm} style={{marginLeft:'auto'}}/>
         </div>
         {formMessage &&
