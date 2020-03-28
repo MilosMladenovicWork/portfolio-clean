@@ -26,6 +26,7 @@ nav ul li a {
   text-decoration: none;
   display:inline-block;
   padding:10px 27.5px;
+  cursor:pointer;
 }
 
 nav ul li a p{

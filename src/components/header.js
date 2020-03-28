@@ -1,6 +1,8 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useState, useEffect} from "react"
+import {Link, animateScroll as scroll} from 'react-scroll'
+import {animated, useSpring} from 'react-spring'
 
 import HomeIcon from './homeicon'
 import AboutIcon from './abouticon'
@@ -9,12 +11,29 @@ import ContactIcon from './contacticon'
 
 import './header.css'
 
-const Header = ({section}) => (
-  <header>
+function Header({section}){
+
+  const [urlPath, setUrlPath] = useState()
+  const [showHeader, setShowHeader] = useState()
+
+  const remove = useSpring({transform:showHeader ? 'translateY(0%)' : 'translateY(100%)'})
+
+  useEffect(() => {
+    setUrlPath(window.location.pathname)
+  },[])
+  
+  useEffect(() => {
+    if(urlPath){
+      setShowHeader(!urlPath.match(/([^\/]+$)/gm))
+    }
+  }, urlPath)
+
+  return(
+    <animated.header style={remove}>
     <nav>
       <ul>
         <li>
-          <Link to='#home'>
+          <Link to='home' smooth={true} duration={500}>
             <HomeIcon section={section}/>
             <p className={section === 0 && 'active-section'}>
               Home
@@ -22,7 +41,7 @@ const Header = ({section}) => (
           </Link>
         </li>
         <li>
-          <Link to='#about'>
+          <Link to='about' smooth={true} duration={500}>
             <AboutIcon section={section}/>
             <p className={section === 1 && 'active-section'}>
               About
@@ -30,7 +49,7 @@ const Header = ({section}) => (
           </Link>
         </li>
         <li>
-          <Link to='#projects'>
+          <Link to='projects' smooth={true} duration={500}>
             <ProjectsIcon section={section}/>
             <p className={section === 2 && 'active-section'}>
               Projects
@@ -38,7 +57,7 @@ const Header = ({section}) => (
           </Link>
         </li>
         <li>
-          <Link to='#contact'>
+          <Link to='contact' smooth={true} duration={500}>
             <ContactIcon section={section}/>
             <p className={section === 3 && 'active-section'}>
               Contact
@@ -47,8 +66,10 @@ const Header = ({section}) => (
         </li>
       </ul>
     </nav>
-  </header>
-)
+  </animated.header>
+  )
+}
+
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
