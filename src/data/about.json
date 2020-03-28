@@ -1,0 +1,34 @@
+{
+  "description":"Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. ",
+  "technologies":["HTML5", "CSS3","JavaScript", "Bootstrap", "SCSS", "JQuery", "React", "Node.js", "MongoDB"],
+  "special":[
+    {
+      "icon":"../images/smile.svg",
+      "text":"This is special card"
+    },
+    {
+      "icon":"../images/smile.svg",
+      "text":"This is special card"
+    },
+    {
+      "icon":"../images/smile.svg",
+      "text":"This is special card"
+    },
+    {
+      "icon":"../images/smile.svg",
+      "text":"This is special card"
+    },
+    {
+      "icon":"../images/smile.svg",
+      "text":"This is special card"
+    },
+    {
+      "icon":"../images/smile.svg",
+      "text":"This is special card"
+    },
+    {
+      "icon":"../images/smile.svg",
+      "text":"This is special card"
+    }
+  ]
+}
