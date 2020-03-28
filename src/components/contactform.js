@@ -150,7 +150,7 @@ function ContactForm(){
         setFormStatus('success')
         setFormMessage(data.message)
         setFormStatus('success')
-        setForm({name:'', value:'', message:''})
+        setForm({name:'', email:'', message:''})
       } 
       ).catch(e => {
         setFormStatus('error')
