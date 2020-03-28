@@ -12,6 +12,7 @@ import Button from '../components/button'
 
 import smileIcon from '../images/smile.svg'
 import visitIcon from '../images/visit.svg'
+import backArrow from '../images/arrowback.svg'
 
 import './projectpage.css'
 
@@ -21,7 +22,7 @@ function Project({data}){
   const project = data.allProjectsJson.nodes[0]
 
   const [imageHovered, setImageHovered] = useState(false)
-  
+
   const imageShrink = useSpring({
     transform: imageHovered ? 'scale(1)' : 'scale(0.8)', 
     zIndex:imageHovered ? 2 : 0
@@ -41,6 +42,9 @@ function Project({data}){
     <Layout>
       <Section>
         <SectionHeader text={project.name}/>
+        <div className='back-arrow'>
+            <img onClick={() => window.history.back()} src={backArrow} alt='Go back'/>
+        </div>
         <div className='project-image-container'>
           <animated.img 
             className='project-image' 

@@ -24,3 +24,11 @@
   display:flex;
   justify-content:center;
 }
+
+.back-arrow{
+  display:inline-block;
+  position:absolute;
+  top:15vh;
+  right:0;
+  cursor:pointer;
+}
