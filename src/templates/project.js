@@ -21,7 +21,7 @@ function Project({data}){
   const project = data.allProjectsJson.nodes[0]
 
   const [imageHovered, setImageHovered] = useState(false)
-  const [informationHovered, setInformationHovered] = useState(false)
+  
   const imageShrink = useSpring({
     transform: imageHovered ? 'scale(1)' : 'scale(0.8)', 
     zIndex:imageHovered ? 2 : 0
@@ -32,10 +32,9 @@ function Project({data}){
       transform:'translateY(-15vh) scale(1)'
     },
     to:[
-    {transform:imageHovered ? 'translateY(-15vh) scale(1)' : 'translateY(-15vh) scale(0.8)'},
-    {transform:'translateY(0vh) scale(1)'}, 
-    {transform:imageHovered ? 'translateY(5vh) scale(0.8)' : 'translateY(5vh) scale(1)'},
-    {transform:imageHovered ? 'translateY(-15vh) scale(0.8)' : 'translateY(-15vh) scale(1)'}
+    {transform:'translateY(-15vh) scale(1)'},
+    {transform:'translateY(5vh) scale(1)'},
+    {transform:'translateY(-15vh) scale(1)'}
   ]})
 
   return(
