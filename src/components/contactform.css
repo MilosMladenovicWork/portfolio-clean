@@ -30,3 +30,8 @@
 .not-valid{
   border-bottom: 1px solid red !important;
 }
+
+.status-icon{
+  width:fit-content;  
+  margin-bottom:20px;
+}

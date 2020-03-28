@@ -6,14 +6,27 @@ import Button from './button'
 import './contactform.css'
 
 import sendIcon from '../images/send.svg'
+import notDone from '../images/notdone.svg'
+import done from '../images/done.svg'
 
 function ContactForm(){
 
   const [focused, setFocused] = useState(false)
   const [form, setForm] = useState({})
-  const [formValid, setFormValid] = useState({})
+  const [inputValid, setInputValid] = useState({})
+  const [formValid, setFormValid] = useState()
+  const [formMessage, setFormMessage] = useState()
+  const [formStatus, setFormStatus] = useState('')
+
 
   const scale = useSpring({transform: focused ? 'scale(1.1)' : 'scale(1)'})
+  const [shake, setShake, stopShake] = useSpring(() => ({
+    reset:true,
+    config:{
+    tension:1000,
+    friction:4,
+    mass:1,
+  }}))
 
   function changeHandler(e){
     let name = e.target.name
@@ -48,7 +61,7 @@ function ContactForm(){
       presence:true,
       length:{
         minimum:10,
-        message:'Message must be at least 10 characters!'
+        message:'must be at least 10 characters'
       }
     }
   }
@@ -58,7 +71,7 @@ function ContactForm(){
       presence:true,
       length:{
         minimum:3,
-        message:"Name must be at least 3 characters!"       
+        message:"must be at least 3 characters"       
       }
     },
     email:{
@@ -69,7 +82,7 @@ function ContactForm(){
       presence:true,
       length:{
         minimum:10,
-        message:'Message must be at least 10 characters!'
+        message:'must be at least 10 characters'
       }
     }
   }
@@ -94,14 +107,14 @@ function ContactForm(){
       );
 
     if(validatedInfo != undefined){
-      setFormValid((prevState) => {
+      setInputValid((prevState) => {
         return{
           ...prevState,
           [name]:false
         }
       })
     }else if(validatedInfo == undefined){
-      setFormValid((prevState) => {
+      setInputValid((prevState) => {
         return{
           ...prevState,
           [name]:true
@@ -130,58 +143,91 @@ function ContactForm(){
 
   function checkValidationForm(){
     let validatedInfo = validate({name:form.name, email:form.email, message:form.message}, formConstraints)
-    if(validatedInfo == undefined){
+    if(validatedInfo == undefined){ 
+      setFormStatus('loading')
       postFormData('https://server-personal-use.herokuapp.com/contact', form)
+      .then(data =>{
+        setFormStatus('success')
+        setFormMessage(data.message)
+        setFormStatus('success')
+        setForm({name:'', value:'', message:''})
+      } 
+      ).catch(e => {
+        setFormStatus('error')
+        setFormMessage('There was an error')  
+        }
+        )
     }else{
-      window.alert('nope')
+      let string = '';
+      console.log(validatedInfo)
+      Object.values(validatedInfo).forEach(message => string = string + message + '. ')
+      setFormMessage(string)
+      setFormStatus('error')
+      setShake({
+        from:{transform:'translateX(-20px)'},
+        to:{transform:'translateX(0px)'}
+      })
     }
   }
 
   return(
-    <animated.form style={scale} className='contact-form'>
-      <input 
-        type='text' 
-        name='name' 
-        placeholder='Name' 
-        className={
-          formValid.name === false && 'not-valid' 
+    <animated.div style={shake}>
+      <animated.form style={scale} className='contact-form'>
+        <input 
+          type='text' 
+          name='name' 
+          value={form.name}
+          placeholder='Name' 
+          className={
+            inputValid.name === false && 'not-valid' 
+          }
+          onFocus={() => setFocused(true)} 
+          onBlur={(e) => {
+            setFocused(false);
+            checkValidationInput(e)
+          }}
+          onChange={(e) => changeHandler(e)}
+        />
+        <input 
+          type='email' 
+          name='email'
+          value={form.email}
+          placeholder='Email' 
+          className={
+            inputValid.email === false && 'not-valid' 
+          }
+          onFocus={() => setFocused(true)} 
+          onBlur={(e) => {
+            setFocused(false);
+            checkValidationInput(e)
+          }}
+          onChange={(e) => changeHandler(e)}
+        />
+        <textarea 
+          name='message' 
+          value={form.message}
+          placeholder='Message' 
+          className={
+            inputValid.message === false && 'not-valid' 
+          }
+          onFocus={() => setFocused(true)} 
+          onBlur={(e) => {
+            setFocused(false);
+            checkValidationInput(e)
+          }}
+          onChange={(e) => changeHandler(e)}
+        ></textarea>
+        <div style={{display:'flex',alignItems:'center'}}>
+          {formStatus === 'success' && <img className='status-icon' src={done} alt='Form status valid'/>}
+          {formStatus === 'loading' && <img className='status-icon' src={sendIcon} alt='Form status valid'/>}
+          {formStatus === 'error' && <img className='status-icon' src={notDone} alt='Form status not valid'/>}
+          <Button text='Send' icon={sendIcon} onClick={checkValidationForm} style={{marginLeft:'auto'}}/>
+        </div>
+        {formMessage &&
+          <p style={{textAlign:'center'}}>{formMessage}</p>
         }
-        onFocus={() => setFocused(true)} 
-        onBlur={(e) => {
-          setFocused(false);
-          checkValidationInput(e)
-        }}
-        onChange={(e) => changeHandler(e)}
-      />
-      <input 
-        type='email' 
-        name='email' 
-        placeholder='Email' 
-        className={
-          formValid.email === false && 'not-valid' 
-        }
-        onFocus={() => setFocused(true)} 
-        onBlur={(e) => {
-          setFocused(false);
-          checkValidationInput(e)
-        }}
-        onChange={(e) => changeHandler(e)}
-      />
-      <textarea 
-        name='message' 
-        placeholder='Message' 
-        className={
-          formValid.message === false && 'not-valid' 
-        }
-        onFocus={() => setFocused(true)} 
-        onBlur={(e) => {
-          setFocused(false);
-          checkValidationInput(e)
-        }}
-        onChange={(e) => changeHandler(e)}
-      ></textarea>
-      <Button text='Send' icon={sendIcon} onClick={checkValidationForm} style={{marginLeft:'auto'}}/>
-    </animated.form>
+      </animated.form>
+    </animated.div>
   )
 }
 
