@@ -1,0 +1,11 @@
+.home-illustration{
+  width:70vh;
+  height:100%;
+}
+
+@media (max-width:576px){
+  .home-illustration{
+    width:100%;
+    height:auto;
+  }
+}

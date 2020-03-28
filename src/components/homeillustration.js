@@ -1,5 +1,6 @@
 import React from 'react'
 import {animated, useSpring} from 'react-spring'
+import './homeillustration.css'
 
 import AnimatedGroup from '../components/animatedgroup'
 
@@ -7,10 +8,9 @@ function HomeIllustration(){
 
   return(
     <svg
+      className='home-illustration'
       xmlns="http://www.w3.org/2000/svg"
-      width="70vh"
       viewBox="0 0 725.231 740.601"
-      style={{height:'100%'}}
     >
       <defs>
         <linearGradient

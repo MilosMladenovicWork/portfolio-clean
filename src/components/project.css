@@ -52,3 +52,9 @@
 .project .project-info p{
   margin:0;
 }
+
+@media (max-width:576px){
+  .project{
+    width:100%;
+  }
+}

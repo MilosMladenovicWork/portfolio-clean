@@ -75,13 +75,15 @@ function Project({data}){
               <h3>
                 Technologies used:
               </h3>
-              {project.technologies.map((tech, index) => <Tag text={tech} key={index}/>)}
+              <div className='items-container'>
+                {project.technologies.map((tech, index) => <Tag text={tech} key={index}/>)}
+              </div>
             </InfoContainer>
             <InfoContainer>
               <h3>
                 I have:
               </h3>
-              <div style={{display:'flex', flexWrap:'wrap', justifyContent:'flex-start', alignItems:'flex-start'}}>
+              <div className='special-items-container'>
                 <Card icon={smileIcon} text='4 happy clients'/>
                 <Card icon={smileIcon} text='Hey'/>
                 <Card icon={smileIcon} text='Hey'/>

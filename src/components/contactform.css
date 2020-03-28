@@ -35,3 +35,9 @@
   width:fit-content;  
   margin-bottom:20px;
 }
+
+@media (max-width:576px){
+  .contact-form{
+    width:100%;
+  }
+}

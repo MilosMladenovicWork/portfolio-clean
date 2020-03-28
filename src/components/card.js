@@ -16,7 +16,7 @@ function Card({text, icon}){
     <animated.div 
       style={transform} 
       className='card'
-      onMouseMove={() => set({transform:`scale(1.1)`, backgroundColor:'white',boxShadow:'0 0 10px #F3F3F3'})}
+      onPointerOver={() => set({transform:`scale(1.1)`, backgroundColor:'white',boxShadow:'0 0 10px #F3F3F3'})}
       onPointerOut={() => set({transform:`scale(1)`, backgroundColor:'#F3F3F3',boxShadow:'0 0 10px #F3F3F3'})}
     >
       <img src={icon} alt='card icon'/>

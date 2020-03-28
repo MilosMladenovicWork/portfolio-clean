@@ -14,3 +14,24 @@
 .dark{
   background-color:#F3F3F3;
 }
+
+.special-items-container{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+}
+
+@media (max-width:576px){
+  .info-container .items-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .info-container .special-items-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .half{
+    width:100%;
+  }
+}

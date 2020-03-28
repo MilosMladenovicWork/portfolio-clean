@@ -1,5 +1,4 @@
 section{
-  width:100vw;
   min-height:100vh;
   padding:15vh 0;
   width:1100px;
@@ -10,4 +9,11 @@ section{
 
 section > p{
   margin-bottom:10vh;
+}
+
+@media (max-width:576px){
+  section{
+    width:100%;
+    padding:10vh 5vw;
+  }
 }

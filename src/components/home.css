@@ -1,0 +1,19 @@
+.home-container{
+  display:flex;
+  height:70vh;
+}
+
+.home-container .centered{
+  align-self: center;
+}
+
+@media (max-width:576px){
+  .home-container{
+    height:auto;
+    flex-direction: column;
+  }
+
+  .home-container .centered{
+    align-self: unset;
+  }
+}

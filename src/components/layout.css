@@ -45,3 +45,9 @@ footer{
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width:576px){
+  footer{
+    width:90%;
+  }
+}

@@ -47,13 +47,15 @@ function About(){
             <h3>
               Technologies I use are,
             </h3>
-            {data.dataJson.technologies.map((tech, index) => <Tag text={tech} key={index}/>)}
+            <div className='items-container'>
+              {data.dataJson.technologies.map((tech, index) => <Tag text={tech} key={index}/>)}
+            </div>
           </InfoContainer>
           <InfoContainer>
             <h3>
               I have:
             </h3>
-            <div style={{display:'flex', flexWrap:'wrap', justifyContent:'flex-start', alignItems:'flex-start'}}>
+            <div className='special-items-container'>
               {data.dataJson.special.map((card, index) => <Card text={card.text} icon={card.icon.publicURL} index={index}/>)}
             </div>
           </InfoContainer>
