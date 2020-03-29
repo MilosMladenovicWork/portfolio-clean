@@ -38,6 +38,9 @@ function Project({data}){
     {transform:'translateY(-15vh) scale(1)'}
   ]})
 
+  
+console.log(project)
+
   return(
     <Layout>
       <Section>
@@ -61,14 +64,7 @@ function Project({data}){
                 Description:
               </h3>
               <p>
-                Some sample text. Some sample text. Some sample text. 
-                Some sample text. Some sample text. Some sample text. 
-                Some sample text. Some sample text. Some sample text. 
-                Some sample text. Some sample text. Some sample text. 
-                Some sample text. Some sample text. Some sample text. 
-                Some sample text. Some sample text. Some sample text. 
-                Some sample text. Some sample text. Some sample text. 
-                Some sample text.
+                {project.description}
               </p>
             </InfoContainer>
             <InfoContainer small={true}>
@@ -84,14 +80,9 @@ function Project({data}){
                 I have:
               </h3>
               <div className='special-items-container'>
-                <Card icon={smileIcon} text='4 happy clients'/>
-                <Card icon={smileIcon} text='Hey'/>
-                <Card icon={smileIcon} text='Hey'/>
-                <Card icon={smileIcon} text='Hey'/>
-                <Card icon={smileIcon} text='Hey'/>
-                <Card icon={smileIcon} text='Hey'/>
-                <Card icon={smileIcon} text='Hey'/>
-                <Card icon={smileIcon} text='Hey'/>
+                {project.special.map((card,index) =>{
+                  return <Card key={index} icon={card.icon.publicURL} text={card.text}/>
+                })}
               </div>
             </InfoContainer>
             <div style={{marginLeft:'auto'}}>
@@ -108,6 +99,7 @@ function Project({data}){
   )
 }
 
+
 export const query = graphql`
 query($slug: String!) {
   allProjectsJson(filter: {slug: {eq: $slug}}) {
@@ -118,6 +110,13 @@ query($slug: String!) {
         publicURL
       }
       technologies
+      description
+      special{
+        icon{
+          publicURL
+        }
+        text
+      }
     }
   }
 }

@@ -1,34 +1,26 @@
 {
-  "description":"Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. Text from the JSON file. ",
+  "description":"I am a front end web developer currently based in Serbia. My areas of expertise include full knowledge of HTML5, CSS3, JavaScript, Bootstrap, animation API Laxxx, IntersectionObserver and design-oriented programs such as Photoshop, Illustrator, After Effects animations and Adobe XD. I specialize in designing and making responsive, fluid and all browser compatible websites.",
   "technologies":["HTML5", "CSS3","JavaScript", "Bootstrap", "SCSS", "JQuery", "React", "Node.js", "MongoDB"],
   "special":[
     {
       "icon":"../images/smile.svg",
-      "text":"This is special card"
+      "text":"4 happy clients"
     },
     {
-      "icon":"../images/smile.svg",
-      "text":"This is special card"
+      "icon":"../images/time.svg",
+      "text":"More than 1 year of experience"
     },
     {
-      "icon":"../images/smile.svg",
-      "text":"This is special card"
+      "icon":"../images/projects.svg",
+      "text":"More than 8 projects"
     },
     {
-      "icon":"../images/smile.svg",
-      "text":"This is special card"
+      "icon":"../images/passion.svg",
+      "text":"High passion"
     },
     {
-      "icon":"../images/smile.svg",
-      "text":"This is special card"
-    },
-    {
-      "icon":"../images/smile.svg",
-      "text":"This is special card"
-    },
-    {
-      "icon":"../images/smile.svg",
-      "text":"This is special card"
+      "icon":"../images/improvement.svg",
+      "text":"Improvement mindset"
     }
   ]
 }

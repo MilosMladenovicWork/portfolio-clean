@@ -6,7 +6,26 @@
     "slug":"portfolio-2020",
     "technologies":[
       "HTML5", "CSS3", "JavaScript", "React", "WebGL"
-    ]
+    ],
+    "description":"This was mine portfolio website. I thought that it would be good idea to use 3D graphics and interact with them. I also practiced making interactive animations.",
+    "special":[
+    {
+      "icon":"../images/webapplication.svg",
+      "text":"Single page web application"
+    },
+    {
+      "icon":"../images/3d.svg",
+      "text":"WebGL 3D graphics"
+    },
+    {
+      "icon":"../images/observe.svg",
+      "text":"User position observer"
+    },
+    {
+      "icon":"../images/change.svg",
+      "text":"Theme change"
+    }
+  ]
   },
   {
     "name":"Portfolio Crystal",
@@ -15,7 +34,26 @@
     "slug":"portfolio-crystal",
     "technologies":[
       "HTML5", "CSS3", "JavaScript", "React", "WebGL", "Node.js", "Express"
-    ]
+    ],
+    "description":"This was mine portfolio website. This was the first time I used 3D graphics. Also I made backend that handles form submits.",
+    "special":[
+    {
+      "icon":"../images/webapplication.svg",
+      "text":"Single page web application"
+    },
+    {
+      "icon":"../images/3d.svg",
+      "text":"WebGL 3D graphics"
+    },
+    {
+      "icon":"../images/change.svg",
+      "text":"Theme change"
+    },
+    {
+      "icon":"../images/image.svg",
+      "text":"Animated images"
+    }
+  ]
   },
   {
     "name":"Perun",
@@ -24,7 +62,22 @@
     "slug":"perun",
     "technologies":[
       "HTML5", "CSS3", "SCSS", "JavaScript"
-    ]
+    ],
+    "description":"I built this website from design my client made in AdobeXD. I practiced precision and responsiveness while building this website. Also I had to optimize website for variety of browsers and platforms.",
+    "special":[
+    {
+      "icon":"../images/observe.svg",
+      "text":"User position observer"
+    },
+    {
+      "icon":"../images/loading.svg",
+      "text":"Loading indicator"
+    },
+    {
+      "icon":"../images/image.svg",
+      "text":"Animated images"
+    }
+  ]
   },
   {
     "name":"MovieZone",
@@ -33,7 +86,22 @@
     "slug":"moviezone",
     "technologies":[
       "HTML5", "CSS3", "JavaScript", "React", "Redux"
-    ]
+    ],
+    "description":"I came to idea when I asked myself what would I want to get from web application. As we can all agree, there is not enoug time during the week to binge watch all of the latest movie trailers or read long descriptions about them. This application would provide people with fast and always up to date database of movies they can search, or see what is new.",
+    "special":[
+    {
+      "icon":"../images/change.svg",
+      "text":"Theme change"
+    },
+    {
+      "icon":"../images/observe.svg",
+      "text":"Image color detection"
+    },
+    {
+      "icon":"../images/api.svg",
+      "text":"TMdb database"
+    }
+  ]
   },
   {
     "name":"Real Estate",
@@ -42,7 +110,14 @@
     "slug":"real-estate",
     "technologies":[
       "HTML5", "CSS3", "SCSS", "JavaScript"
-    ]
+    ],
+    "description":"This is the project I have designed and developed for my client. He wanted something simple and modern and we agreed upon this design.",
+    "special":[
+    {
+      "icon":"../images/api.svg",
+      "text":"Formspree form submissions"
+    }
+  ]
   },
   {
     "name":"CosmoBakery",
@@ -51,7 +126,14 @@
     "slug":"cosmobakery",
     "technologies":[
       "HTML5", "CSS3", "JavaScript"
-    ]
+    ],
+    "description":"By making this website I practiced working with JavaScript and designing the website. I did't use any JavaScript libraries and tried to do everything from scratch.",
+    "special":[
+    {
+      "icon":"../images/image.svg",
+      "text":"Animated images"
+    }
+  ]
   },
   {
     "name":"CozyHut",
@@ -60,7 +142,14 @@
     "slug":"cozyhut",
     "technologies":[
       "HTML5", "CSS3", "JavaScript", "React", "Gatsby.js"
-    ]
+    ],
+    "description":"This is the website I created by practicing using React framework GatsbyJS.",
+    "special":[
+    {
+      "icon":"../images/image.svg",
+      "text":"Background manipulation"
+    }
+  ]
   },
   {
     "name":"MIMS Muscle",
@@ -69,6 +158,13 @@
     "slug":"mims-muscle",
     "technologies":[
       "HTML5", "CSS3", "SCSS", "JavaScript"
-    ]
+    ],
+    "description":"This is the website I designed and developed for my client. Design is simple and user interactions make it stand out.",
+    "special":[
+    {
+      "icon":"../images/image.svg",
+      "text":"Background manipulation"
+    }
+  ]
   }
 ]
