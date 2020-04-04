@@ -77,7 +77,7 @@ console.log(project)
             </InfoContainer>
             <InfoContainer>
               <h3>
-                I have:
+                This project has:
               </h3>
               <div className='special-items-container'>
                 {project.special.map((card,index) =>{

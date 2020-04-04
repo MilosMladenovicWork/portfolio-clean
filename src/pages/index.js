@@ -20,7 +20,7 @@ function IndexPage(){
 
   return(
     <Layout section={section}>
-      <SEO title="Home" />
+      <SEO title="Home"/>
       <VisibilitySensor partialVisibility offset={{bottom:offset, top:offset}} onChange={(isVisible) => isVisible && setSection(0)}>
         <Home/>
       </VisibilitySensor>
