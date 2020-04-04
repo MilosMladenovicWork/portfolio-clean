@@ -17,12 +17,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Portfolio Milos Mladenovic`,
+        short_name: `Portfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#000000`,
-        display: `minimal-ui`,
+        theme_color: `#F3F3F3`,
+        display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
