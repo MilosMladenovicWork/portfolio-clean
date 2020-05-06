@@ -1,6 +1,54 @@
 [
   {
-    "name":"Portfolio 2020",
+    "name":"Perun",
+    "img":"../images/perun.png",
+    "href":"https://perunperun.netlify.com/",
+    "slug":"perun",
+    "technologies":[
+      "HTML5", "CSS3", "SCSS", "JavaScript"
+    ],
+    "description":"I built this website from design my client made in AdobeXD. I practiced precision and responsiveness while building this website. Also I had to optimize website for variety of browsers and platforms.",
+    "special":[
+      {
+        "icon":"../images/observe.svg",
+      "text":"User position observer"
+    },
+    {
+      "icon":"../images/loading.svg",
+      "text":"Loading indicator"
+    },
+    {
+      "icon":"../images/image.svg",
+      "text":"Animated images"
+    }
+  ]
+},
+{
+  "name":"MovieZone",
+  "img":"../images/moviezone.png",
+  "href":"https://moviezonemovie.netlify.com/",
+  "slug":"moviezone",
+  "technologies":[
+    "HTML5", "CSS3", "JavaScript", "React", "Redux"
+  ],
+  "description":"I came to idea when I asked myself what would I want to get from web application. As we can all agree, there is not enoug time during the week to binge watch all of the latest movie trailers or read long descriptions about them. This application would provide people with fast and always up to date database of movies they can search, or see what is new.",
+  "special":[
+  {
+    "icon":"../images/change.svg",
+    "text":"Theme change"
+  },
+  {
+    "icon":"../images/observe.svg",
+    "text":"Image color detection"
+  },
+  {
+    "icon":"../images/api.svg",
+    "text":"TMdb database"
+  }
+]
+},
+{
+  "name":"Portfolio 2020",
     "img":"../images/portfolio2020.png",
     "href":"https://portfolio2020portfolio.netlify.com/",
     "slug":"portfolio-2020",
@@ -24,98 +72,6 @@
     {
       "icon":"../images/change.svg",
       "text":"Theme change"
-    }
-  ]
-  },
-  {
-    "name":"Portfolio Crystal",
-    "img":"../images/portfoliocrystal.png",
-    "href":"https://portfoliocrystal.netlify.com/",
-    "slug":"portfolio-crystal",
-    "technologies":[
-      "HTML5", "CSS3", "JavaScript", "React", "WebGL", "Node.js", "Express"
-    ],
-    "description":"This was mine portfolio website. This was the first time I used 3D graphics. Also I made backend that handles form submits.",
-    "special":[
-    {
-      "icon":"../images/webapplication.svg",
-      "text":"Single page web application"
-    },
-    {
-      "icon":"../images/3d.svg",
-      "text":"WebGL 3D graphics"
-    },
-    {
-      "icon":"../images/change.svg",
-      "text":"Theme change"
-    },
-    {
-      "icon":"../images/image.svg",
-      "text":"Animated images"
-    }
-  ]
-  },
-  {
-    "name":"Perun",
-    "img":"../images/perun.png",
-    "href":"https://perunperun.netlify.com/",
-    "slug":"perun",
-    "technologies":[
-      "HTML5", "CSS3", "SCSS", "JavaScript"
-    ],
-    "description":"I built this website from design my client made in AdobeXD. I practiced precision and responsiveness while building this website. Also I had to optimize website for variety of browsers and platforms.",
-    "special":[
-    {
-      "icon":"../images/observe.svg",
-      "text":"User position observer"
-    },
-    {
-      "icon":"../images/loading.svg",
-      "text":"Loading indicator"
-    },
-    {
-      "icon":"../images/image.svg",
-      "text":"Animated images"
-    }
-  ]
-  },
-  {
-    "name":"MovieZone",
-    "img":"../images/moviezone.png",
-    "href":"https://moviezonemovie.netlify.com/",
-    "slug":"moviezone",
-    "technologies":[
-      "HTML5", "CSS3", "JavaScript", "React", "Redux"
-    ],
-    "description":"I came to idea when I asked myself what would I want to get from web application. As we can all agree, there is not enoug time during the week to binge watch all of the latest movie trailers or read long descriptions about them. This application would provide people with fast and always up to date database of movies they can search, or see what is new.",
-    "special":[
-    {
-      "icon":"../images/change.svg",
-      "text":"Theme change"
-    },
-    {
-      "icon":"../images/observe.svg",
-      "text":"Image color detection"
-    },
-    {
-      "icon":"../images/api.svg",
-      "text":"TMdb database"
-    }
-  ]
-  },
-  {
-    "name":"Real Estate",
-    "img":"../images/realestate.png",
-    "href":"https://realestatereal.netlify.com/",
-    "slug":"real-estate",
-    "technologies":[
-      "HTML5", "CSS3", "SCSS", "JavaScript"
-    ],
-    "description":"This is the project I have designed and developed for my client. He wanted something simple and modern and we agreed upon this design.",
-    "special":[
-    {
-      "icon":"../images/api.svg",
-      "text":"Formspree form submissions"
     }
   ]
   },
@@ -148,6 +104,50 @@
     {
       "icon":"../images/image.svg",
       "text":"Background manipulation"
+    }
+  ]
+  },
+  {
+    "name":"Portfolio Crystal",
+    "img":"../images/portfoliocrystal.png",
+    "href":"https://portfoliocrystal.netlify.com/",
+    "slug":"portfolio-crystal",
+    "technologies":[
+      "HTML5", "CSS3", "JavaScript", "React", "WebGL", "Node.js", "Express"
+    ],
+    "description":"This was mine portfolio website. This was the first time I used 3D graphics. Also I made backend that handles form submits.",
+    "special":[
+    {
+      "icon":"../images/webapplication.svg",
+      "text":"Single page web application"
+    },
+    {
+      "icon":"../images/3d.svg",
+      "text":"WebGL 3D graphics"
+    },
+    {
+      "icon":"../images/change.svg",
+      "text":"Theme change"
+    },
+    {
+      "icon":"../images/image.svg",
+      "text":"Animated images"
+    }
+  ]
+  },
+  {
+    "name":"Real Estate",
+    "img":"../images/realestate.png",
+    "href":"https://realestatereal.netlify.com/",
+    "slug":"real-estate",
+    "technologies":[
+      "HTML5", "CSS3", "SCSS", "JavaScript"
+    ],
+    "description":"This is the project I have designed and developed for my client. He wanted something simple and modern and we agreed upon this design.",
+    "special":[
+    {
+      "icon":"../images/api.svg",
+      "text":"Formspree form submissions"
     }
   ]
   },
